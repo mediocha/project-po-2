@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+   
+    <div id="site">
+        <div id="header">
+            <div id="bar-menu">
+               
+            </div>
+            <h1>espaçamento</h1>
+        </div>
+
+        <div id="conteudo">
+            <div class="container">
+                    <form>
+                        
+                        <label for="var-decisao">Variavéis de Decisão</label><br />
+                        
+                        <div class="row">
+                            <div class="col">
+                                <div class="input-group">
+                                    <input type="text" id="input-var" class="form-control m-input">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <button id="rowAdder" type="button" class="btn btn-red">
+                                    Adicionar
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="newinput"></div>
+
+
+                        <label for="func-obj">Função-objetivo</label><br />
+                       
+                        <div class="row" id="input-fo">
+                            <div class="col col-md-2">
+                                <button id="rowAdderFo" type="button" class="btn btn-red">
+                                    Adicionar
+                                </button>
+                            </div>
+                            <div class="col col-md-2">
+                                <div class="input-group">
+                                    <input type="text" id="input-var" class="form-control m-input">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <div id="radio-form">
+                                    <input type="radio" id="max" name="fo" value="max"  />
+                                    <label for="max">MAX</label>
+                                    
+                                    <input type="radio" id="min" name="fo" value="min"  />
+                                    <label for="min">MIN</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col col-md-2">
+                                <input type="text" id="fo">
+                                <button id="fo-btn" type="button" class="btn btn-red">
+                                    Gerar
+                                </button>
+                            </div>
+                            
+                        </div>
+
+                        <div id="lista-restricoes"></div>
+
+                        <div class="row">
+                            <div class="col">
+                                <button id="dual-btn" type="button" class="btn btn-red">
+                                    Dual
+                                </button>
+                            </div>
+                        </div>
+                        <div id="dual-saida"></div>
+                       
+                    </form>
+               
+                </div>
+                
+            </div>
+           
+    </div>
+
+    <div id="footer">
+
+        <h1>Resultado 2</h1>
+    </div>
+</body>
+<script src="./js/index.js"></script>
+</html>
