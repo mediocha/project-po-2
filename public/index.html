@@ -1,109 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="styles.css" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="styles.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-</head>
-<body>
-   
-    <div id="site">
-        <div id="header">
-            <div id="bar-menu">
-               
+    </head>
+    <body>
+    
+        <div id="site">
+        
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="header">
+                <div class="container-fluid">
+                    <a class="navbar-brand" style="color:white">Pesquisa Operacional 2023</a>
+                    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                        <a class="nav-link">Antonio Mádson Rocha</a>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+            </nav>
+            
+
+            <div id="conteudo">
+            
+                    <div id="conteudo-left">
+                        <fieldset>
+                            <h2>Geração do PPL</h2><br><br>
+                            <label for="var-decisao">Número de Variáveis:</label><br>
+                                
+                            <div class="row">
+                                <div class="col col-md-8">
+                                    <div class="input-group">
+                                        <input type="text" id="input-var" class="form-control m-input">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <label for="var-restr">Quantidade de Restrições:</label><br> 
+                            <div class="row">                       
+                                <div class="col col-md-8">
+                                    <div class="input-group">
+                                        <input type="text" id="input-restr" class="form-control m-input">
+                                    </div>
+                                </div><br>
+                            </div><br>
+                            <label for="var-fo">Função-Objetivo:</label><br>   
+                                <div class="row">
+                                    <br>
+                                    <div class="col col-md-2">
+                                        <div id="radio-form">
+                                            <input type="radio" id="max" name="fo" value="max"  />
+                                            <label for="max">MAX</label><br>
+                                            
+                                            <input type="radio" id="min" name="fo" value="min"  />
+                                            <label for="min">MIN</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
+                                <div class="row">
+                                    <div class="col">
+                                        <button id="gerar-pll" type="button" class="btn btn-red" disabled="disabled">
+                                            Gerar
+                                        </button>
+                                    </div>
+                                </div>
+                        </fieldset>       
+                    </div>
+
+                    <div id="conteudo-right">
+
+                        <h2>Prime</h2>
+
+                        <form id="op-form" class="table-responsive">
+                            
+                            <!--Lista de variaveis-->
+                            <div id="newinput"></div>
+                        
+                            <!--Função Objetivo-->
+                            <div id="input-fo"></div>
+
+                            <!--Lista de restrições-->
+                            <div id="lista-restricoes"></div>
+
+                           
+                        </form>
+                        <div id="dual-btn"></div>
+                    </div>
+                </div>
             </div>
-            <h1>espaçamento</h1>
+        <div id="footer">
+
+            <h1>Dual</h1>
+            <fieldset>
+                <div id="dual-saida"></div>
+            </fieldset>
         </div>
 
-        <div id="conteudo">
-            <div class="container">
-                    <form>
-                        
-                        <label for="var-decisao">Variavéis de Decisão</label><br />
-                        
-                        <div class="row">
-                            <div class="col">
-                                <div class="input-group">
-                                    <input type="text" id="input-var" class="form-control m-input">
-                                </div>
-                            </div>
-                            <div class="col">
-                                <button id="rowAdder" type="button" class="btn btn-red">
-                                    Adicionar
-                                </button>
-                            </div>
-                        </div>
-
-                        <div id="newinput"></div>
-
-
-                        <label for="func-obj">Função-objetivo</label><br />
-                       
-                        <div class="row" id="input-fo">
-                            <div class="col col-md-2">
-                                <button id="rowAdderFo" type="button" class="btn btn-red">
-                                    Adicionar
-                                </button>
-                            </div>
-                            <div class="col col-md-2">
-                                <div class="input-group">
-                                    <input type="text" id="input-var" class="form-control m-input">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col">
-                                <div id="radio-form">
-                                    <input type="radio" id="max" name="fo" value="max"  />
-                                    <label for="max">MAX</label>
-                                    
-                                    <input type="radio" id="min" name="fo" value="min"  />
-                                    <label for="min">MIN</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col col-md-2">
-                                <input type="text" id="fo">
-                                <button id="fo-btn" type="button" class="btn btn-red">
-                                    Gerar
-                                </button>
-                            </div>
-                            
-                        </div>
-
-                        <div id="lista-restricoes"></div>
-
-                        <div class="row">
-                            <div class="col">
-                                <button id="dual-btn" type="button" class="btn btn-red">
-                                    Dual
-                                </button>
-                            </div>
-                        </div>
-                        <div id="dual-saida"></div>
-                       
-                    </form>
-               
-                </div>
-                
-            </div>
-           
-    </div>
-
-    <div id="footer">
-
-        <h1>Resultado 2</h1>
-    </div>
-</body>
-<script src="./js/index.js"></script>
+    </body>
+    <script src="./js/index.js"></script>
 </html>

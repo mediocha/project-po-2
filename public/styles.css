@@ -1,46 +1,80 @@
 #site {
 
-    width:1000px;
+    width:1351px;
     /* Definirmos a altura da página*/
     height:700px;
     /* Aqui definiremos a posição que a página ocupará na tela, nesse caso estamos definindo que fique centralizado na tela*/
     /*top : posição de cima */
     margin-top:0;
     /* left: posição de esquerda*/
-    margin-left:auto;
+    margin-left:0;
     /* bottom : posição de baixo */
     margin-bottom:0;
     /* right : posição de direita */
-    margin-right:auto;
+    margin-right:0;
     /* Aqui definiremos a cor de fundo da página */
-    background-color:#666;
+    
 }
 #header {
-    width: 1000px;
-    height: 100px;
-    background-color: aqua;
-}
-
-#bar-menu {
-    width: 1000px;
+    width: 1351px;
     height: 50px;
-    background-color: green;
+  
+
 }
 #footer{
-    width: 1000px;
+    width: 1351px;
     height: 500px;
     margin-top: 50px;
-    background-color: pink;
+    text-align: center;
 }
 
 #conteudo {
-    width: 1000px;
+ 
     height: 600px;
     
+   
+  
+}
+#gerar-pll, #gerar-dual {
+    padding-left:160px;
+    padding-right: 195px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 10px;
+    text-align: center;
+    color: white;
     background-color: blue;
-
+}
+#gerar-dual{
+    margin-top: 10px;
+    align-items: center;
 }
 
+#conteudo-left {
+
+    margin-top: 50px;
+    margin-left: 80px;
+    
+    width: 550px;
+    height: 600px;
+    margin-right: 5px;
+    float:left;
+}
+
+#conteudo-right {
+    
+    width: 650px;
+    height: 400px;
+    margin-top: 50px;
+    margin-left: 30px;
+    float:left;
+   
+
+}
+#op-form {
+    overflow: scroll;
+    height: 386px;
+}
 input[type=text]{
     padding:11px; 
     font-size:15px; 
@@ -66,4 +100,7 @@ input[type=text]:focus { background-color: lightblue; }
 #col-entra-fo{
     margin-left: 0%;
     margin-right: 25;
+}
+#dual-saida{
+    font-size: large;
 }
