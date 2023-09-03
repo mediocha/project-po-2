@@ -117,7 +117,7 @@ $("#dual-btn").on("click","#gerar-dual" ,function () {
         //let alok = document.getElementById("#col-fo-003").value;
         var alok = $('#col-fo-0'+ i + parseInt(restr_var)).val();
         
-        preenchT += alok + 'x' + (i+1);
+        preenchT += alok + 'y' + (i+1);
 
         if( i < parseInt(num_var)-1){
             preenchT+=  ' + ';
