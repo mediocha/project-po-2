@@ -13,6 +13,7 @@
     /* right : posição de direita */
     margin-right:0;
     /* Aqui definiremos a cor de fundo da página */
+    background-color: #eeeeee;
     
 }
 #header {
@@ -103,4 +104,13 @@ input[type=text]:focus { background-color: lightblue; }
 }
 #dual-saida{
     font-size: large;
+}
+fieldset {
+    background-color: #eeeeee;
+}
+  
+legend {
+    background-color: gray;
+    color: white;
+    padding: 5px 10px;
 }
