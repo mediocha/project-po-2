@@ -31,10 +31,7 @@
 
 #conteudo {
  
-    height: 600px;
-    
-   
-  
+    height: 600px;  
 }
 #gerar-pll, #gerar-dual {
     padding-left:160px;
@@ -48,6 +45,7 @@
 }
 #gerar-dual{
     margin-top: 10px;
+    padding-left:140px;
     align-items: center;
 }
 
@@ -60,6 +58,12 @@
     height: 600px;
     margin-right: 5px;
     float:left;
+}
+#cont-left {
+    margin-top: 50px;
+    width: 350px;
+    text-align: center;
+    padding: 14px 50px;
 }
 
 #conteudo-right {

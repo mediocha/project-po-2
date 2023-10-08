@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>PO - Dualidade</title>
+        <title>PO - Branch and Bound</title>
         <link href="styles.css" rel="stylesheet">
 
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -35,8 +35,8 @@
             
                     <div id="conteudo-left">
                         <fieldset>
-                            <h2>Geração do PPL</h2><br><br>
-                            <label for="var-decisao">Número de Variáveis:</label><br>
+                            <h2>Mochila Binária</h2><br><br>
+                            <label for="var-decisao">Número de Itens:</label><br>
                                 
                             <div class="row">
                                 <div class="col col-md-8">
@@ -46,7 +46,7 @@
                                 </div>
                             </div>
                             <br>
-                            <label for="var-restr">Quantidade de Restrições:</label><br> 
+                            <label for="var-restr">Capacidade da Mochila:</label><br> 
                             <div class="row">                       
                                 <div class="col col-md-8">
                                     <div class="input-group">
@@ -54,21 +54,8 @@
                                     </div>
                                 </div><br>
                             </div><br>
-                            <label for="var-fo">Função-Objetivo:</label><br>   
-                                <div class="row">
-                                    <br>
-                                    <div class="col col-md-2">
-                                        <div id="radio-form">
-                                            <input type="radio" id="max" name="fo" value="max"  />
-                                            <label for="max">MAX</label><br>
-                                            
-                                            <input type="radio" id="min" name="fo" value="min"  />
-                                            <label for="min">MIN</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br>
-                                <br>
+                            <label for="var-fo"></label><br>   
+                                
                                 <div class="row">
                                     <div class="col">
                                         <button id="gerar-pll" type="button" class="btn btn-red" disabled="disabled">
@@ -76,12 +63,18 @@
                                         </button>
                                     </div>
                                 </div>
-                        </fieldset>       
+                        </fieldset> 
+                        <div id="cont-left">
+                            <fieldset>
+                                <legend>Solução ótima</legend>
+                                <div id="dual-saida"></div>
+                            </fieldset>
+                        </div>      
                     </div>
 
                     <div id="conteudo-right">
 
-                        <h2>Prime</h2>
+                        <h2>Restrições</h2>
 
                         <form id="op-form" class="table-responsive">
                             
@@ -100,13 +93,6 @@
                     </div>
                 </div>
             </div>
-        <div id="footer">
-            <fieldset>
-                <legend>Dual</legend>
-                <div id="dual-saida"></div>
-            </fieldset>
-        </div>
-
     </body>
     <script src="./js/index.js"></script>
 </html>
