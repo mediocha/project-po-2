@@ -35,7 +35,7 @@ $("#gerar-pll").click(function () {
                 '<div class="col"><label>Peso</label></div>' +
                 '</div>';
 
-    // substituir o item por numero - se der
+    // substitugir o item por numero - se der
     for (j = 0; j < parseInt(num_var); j++) {
         //if(cont < 3)
         //variaveis
